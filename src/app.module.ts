@@ -17,7 +17,7 @@ import { Order } from './orders/entities/order.entity';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'fmkZ!302_',
+      password: 'mama02031978',
       database: 'videoproduct',
       entities: [Client, Service, Order],
       synchronize: true, 

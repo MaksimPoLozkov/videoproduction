@@ -1,0 +1,16 @@
+.but{
+    background-color: #FF7D1A;
+    font-size: 24px;
+    color: white;
+    padding: 30px 231px 30px 231px;
+    margin-left: 160px;
+    border-width: 0;
+    border-radius: 13px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.but:hover{
+    background-color: #ffa967;
+    cursor: pointer;
+}

@@ -1,36 +1,27 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
-import { Client } from '../../client/entities/client.entity';
-import { Service } from '../../services/entities/service.entity';
+import { Service } from 'src/services/entities/service.entity';
 
 @Entity()
 export class Order {
-  @PrimaryGeneratedColumn()
-  id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
-  @ManyToOne(() => Client)
-  @JoinColumn()
-  client: Client;
+    @Column()
+    name: string;
 
-  @ManyToOne(() => Service)
-  @JoinColumn()
-  service: Service;
+    @Column()
+    phoneNumber: string;
 
-  @Column({
-    type: 'enum',
-    enum: ['pending', 'paid', 'in_progress', 'completed', 'cancelled'],
-    default: 'pending'
-  })
-  status: string;
+    @Column()
+    address: string;
 
-  @Column({ type: 'decimal', precision: 10, scale: 2 })
-  amount: number;
+    @ManyToOne(() => Service)
+    @JoinColumn({ name: 'serviceId' })
+    service: Service;
 
-  @Column({ nullable: true })
-  paymentId: string;
+    @Column({ type: 'text', nullable: true })
+    description: string;
 
-  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  createdAt: Date;
-
-  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP', onUpdate: 'CURRENT_TIMESTAMP' })
-  updatedAt: Date;
+    @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+    createdAt: Date;
 }

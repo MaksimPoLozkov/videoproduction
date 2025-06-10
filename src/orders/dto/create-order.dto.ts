@@ -1,15 +1,29 @@
-import { IsNumber, IsNotEmpty } from 'class-validator';
+import { 
+  IsNotEmpty, 
+  IsString, 
+  IsPhoneNumber, 
+  IsNumber,
+  IsOptional 
+} from 'class-validator';
 
 export class CreateOrderDto {
-  @IsNumber()
   @IsNotEmpty()
-  clientId: number;
+  @IsString()
+  name: string;
 
-  @IsNumber()
   @IsNotEmpty()
+  @IsPhoneNumber() // Проверяет корректность номера телефона
+  phoneNumber: string;
+
+  @IsNotEmpty()
+  @IsString()
+  address: string;
+
+  @IsNotEmpty()
+  @IsNumber()
   serviceId: number;
 
-  @IsNumber()
-  @IsNotEmpty()
-  amount: number;
+  @IsOptional()
+  @IsString()
+  description?: string;
 }
