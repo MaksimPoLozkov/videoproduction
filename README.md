@@ -1,3 +1,16 @@
+<h1>Учебный проект - сайт видеопродакшена "Склейка" <img src="video-production-frontend\public\cut-scene.png" alt="Ckleyka" width=80 /> </h1>
+<p>На сайте представлены услуги видеопродакшена "Склейка" и форма для заявки. </p>
+<p>При работе были использованы: Typescript, React, Node.js, Nest, TypeORM, PostgreSQl</p>
+<p>Скрины сайта</p>
+<img src="https://github.com/user-attachments/assets/8ed5937a-342a-486e-9f78-dd54f1709159" width = 100% />
+<img src="![2025-06-15_20-49-53](https://github.com/user-attachments/assets/42b565b5-d857-4cb0-8b01-e03c345ada9e)
+" width = 100% />
+<img src="![2025-06-15_20-49-59](https://github.com/user-attachments/assets/e769f38a-e052-47d9-ad9a-4d836b0487e9)
+" width = 100% />
+<img src="![2025-06-15_20-50-04](https://github.com/user-attachments/assets/615b7426-311f-426a-af98-01cfe3f4538d)
+" width = 100% />
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
